@@ -51,7 +51,7 @@ Copyright (C) 2007 Apple Inc. All Rights Reserved.
 #import <InputMethodKit/InputMethodKit.h>
 
 @interface NumberInputController : IMKInputController {
-    NSString* _prev;
+    unichar _prev;
 }
 
 @end

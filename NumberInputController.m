@@ -84,55 +84,61 @@ Here are the three approaches:
 	return NO;
 }
 
-unichar rules[1][3] = {
-	{'A','O','C'}
+unichar rules[3][3] = {
+	{'A','O',0xc5},
+	//{0xc5,'O',"ao"}
+	{'a','o',0xe5},
+	{'o','e',0xf6}
 };
 
 -(BOOL)inputText:(NSString*)string key:(NSInteger)keyCode modifiers:(NSUInteger)flags client:(id)sender
 {
-	NSLog(@"prev: %@ nu: %@", _prev ? _prev : @"", string);
-
+	NSAssert([string length] == 1, @"More than one character in %@", string);
+	unichar c = [string characterAtIndex:0];
+	
+	NSLog(@"prev: %C c: %C", _prev, c);
+	
 	// go through hoops to get buffer position
 	[sender setMarkedText:@"" selectionRange:NSMakeRange(0,0) replacementRange:NSMakeRange(NSNotFound, NSNotFound)];
 	NSUInteger pos = [sender markedRange].location;
 	NSLog(@"pos=%lu", pos);
 
-//	for (int i=0; i<1; i++)
-//	{
-//		if ([_prev isEqualToString:@"a"] && [string isEqualToString:@"o"]) {
-//			[sender insertText:@"å" replacementRange:NSMakeRange(pos-1, 1)];
-//			return YES;
-//		}
+	for (int i=0; i<1; i++)
+	{
+		if (_prev == 'a' && c == 'o') {
+			[sender insertText:@"å" replacementRange:NSMakeRange(pos-1, 1)];
+			return YES;
+		}
+	}
+
+//	if ([_prev isEqualToString:@"a"] && [string isEqualToString:@"o"]) {
+//		NSLog(@"1!");
+//		[sender insertText:@"å" replacementRange:NSMakeRange(pos-1, 1)];
+//		_prev = [[NSString alloc] initWithString:@"å"];
+//		return YES;
+//	}
+//	if ([_prev isEqualToString:@"å"] && [string isEqualToString:@"o"]) {
+//		NSLog(@"2!");
+//		[sender insertText:@"ao" replacementRange:NSMakeRange(pos-1, 1)];
+//		return YES;
+//	}
+//	if ([_prev isEqualToString:@"o"] && [string isEqualToString:@"e"]) {
+//		NSLog(@"3!");
+//		[sender insertText:@"ö" replacementRange:NSMakeRange(pos-1, 1)];
+//		return YES;
+//	}
+//	if ([_prev isEqualToString:@"a"] && [string isEqualToString:@"e"]) {
+//		NSLog(@"4!");
+//		[sender insertText:@"ä" replacementRange:NSMakeRange(pos-1, 1)];
+//		return YES;
+//	}
+//	if ([_prev isEqualToString:@"e"] && [string isEqualToString:@"'"]) {
+//		NSLog(@"5!");
+//		[sender insertText:@"é" replacementRange:NSMakeRange(pos-1, 1)];
+//		return YES;
 //	}
 	
-	if ([_prev isEqualToString:@"a"] && [string isEqualToString:@"o"]) {
-		NSLog(@"1!");
-		[sender insertText:@"å" replacementRange:NSMakeRange(pos-1, 1)];
-		_prev = [[NSString alloc] initWithString:@"å"];
-		return YES;
-	}
-	if ([_prev isEqualToString:@"å"] && [string isEqualToString:@"o"]) {
-		NSLog(@"2!");
-		[sender insertText:@"ao" replacementRange:NSMakeRange(pos-1, 1)];
-		return YES;
-	}
-	if ([_prev isEqualToString:@"o"] && [string isEqualToString:@"e"]) {
-		NSLog(@"3!");
-		[sender insertText:@"ö" replacementRange:NSMakeRange(pos-1, 1)];
-		return YES;
-	}
-	if ([_prev isEqualToString:@"a"] && [string isEqualToString:@"e"]) {
-		NSLog(@"4!");
-		[sender insertText:@"ä" replacementRange:NSMakeRange(pos-1, 1)];
-		return YES;
-	}
-	if ([_prev isEqualToString:@"e"] && [string isEqualToString:@"'"]) {
-		NSLog(@"5!");
-		[sender insertText:@"é" replacementRange:NSMakeRange(pos-1, 1)];
-		return YES;
-	}
-	
-	_prev = [[NSString alloc] initWithString:string];
+	_prev = c;
 	
 	return NO;
 }
