@@ -52,6 +52,7 @@ Copyright (C) 2007 Apple Inc. All Rights Reserved.
 
 @interface NumberInputController : IMKInputController {
     unichar _prev;
+    int _prev_pos;
 }
 
 @end

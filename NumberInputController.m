@@ -113,6 +113,10 @@ unichar rules[NUM_RULES][3] = {
 
 	for (int i=0; i<NUM_RULES; i++)
 	{
+		if (pos != _prev_pos+1)
+			continue;
+		
+		// FIXME spara pos för _prev och kolla att den är ett större än nuvarande pos
 		if (_prev == rules[i][0] && c == rules[i][1]) {
 			[sender insertText:[NSString stringWithCharacters:(rules[i]+2) length:1] replacementRange:NSMakeRange(pos-1, 1)];
 			_prev = rules[i][2];
@@ -155,6 +159,7 @@ unichar rules[NUM_RULES][3] = {
 //	}
 	
 	_prev = c;
+	_prev_pos = pos;
 	
 	return NO;
 }
