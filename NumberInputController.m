@@ -84,11 +84,19 @@ Here are the three approaches:
 	return NO;
 }
 
-unichar rules[3][3] = {
-	{'A','O',0xc5},
-	//{0xc5,'O',"ao"}
+const int NUM_RULES = 7;
+
+unichar rules[NUM_RULES][3] = {
 	{'a','o',0xe5},
-	{'o','e',0xf6}
+	{'A','O',0xc5},
+	
+	{'o','e',0xf6},
+	{'O','E',0xd6},
+	
+	{'a','e',0xe4},
+	{'A','E',0xc4},
+
+	{'e', 0x27, 0xe9}
 };
 
 -(BOOL)inputText:(NSString*)string key:(NSInteger)keyCode modifiers:(NSUInteger)flags client:(id)sender
@@ -103,10 +111,18 @@ unichar rules[3][3] = {
 	NSUInteger pos = [sender markedRange].location;
 	NSLog(@"pos=%lu", pos);
 
-	for (int i=0; i<1; i++)
+	for (int i=0; i<NUM_RULES; i++)
 	{
-		if (_prev == 'a' && c == 'o') {
-			[sender insertText:@"å" replacementRange:NSMakeRange(pos-1, 1)];
+		if (_prev == rules[i][0] && c == rules[i][1]) {
+			[sender insertText:[NSString stringWithCharacters:(rules[i]+2) length:1] replacementRange:NSMakeRange(pos-1, 1)];
+			_prev = rules[i][2];
+			return YES;
+		}
+		
+		if (_prev == rules[i][2] && c == rules[i][1]) {
+			NSLog(@"Bailing out");
+			[sender insertText:[NSString stringWithCharacters:rules[i] length:2] replacementRange:NSMakeRange(pos-1, 1)];
+			_prev = rules[i][1];
 			return YES;
 		}
 	}
