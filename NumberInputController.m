@@ -79,7 +79,6 @@ Here are the three approaches:
     //Return YES to indicate the the key input was received and dealt with.  Key processing will not continue in that case.  In
 	//other words the system will not deliver a key down event to the application.
 	//Returning NO means the original key down will be passed on to the client.
-    NSLog(@"Hej5!");
 	NSLog(@"%@", string);
 	return NO;
 }
@@ -116,7 +115,6 @@ unichar rules[NUM_RULES][3] = {
 		if (pos != _prev_pos+1)
 			continue;
 		
-		// FIXME spara pos för _prev och kolla att den är ett större än nuvarande pos
 		if (_prev == rules[i][0] && c == rules[i][1]) {
 			[sender insertText:[NSString stringWithCharacters:(rules[i]+2) length:1] replacementRange:NSMakeRange(pos-1, 1)];
 			_prev = rules[i][2];
@@ -130,33 +128,6 @@ unichar rules[NUM_RULES][3] = {
 			return YES;
 		}
 	}
-
-//	if ([_prev isEqualToString:@"a"] && [string isEqualToString:@"o"]) {
-//		NSLog(@"1!");
-//		[sender insertText:@"å" replacementRange:NSMakeRange(pos-1, 1)];
-//		_prev = [[NSString alloc] initWithString:@"å"];
-//		return YES;
-//	}
-//	if ([_prev isEqualToString:@"å"] && [string isEqualToString:@"o"]) {
-//		NSLog(@"2!");
-//		[sender insertText:@"ao" replacementRange:NSMakeRange(pos-1, 1)];
-//		return YES;
-//	}
-//	if ([_prev isEqualToString:@"o"] && [string isEqualToString:@"e"]) {
-//		NSLog(@"3!");
-//		[sender insertText:@"ö" replacementRange:NSMakeRange(pos-1, 1)];
-//		return YES;
-//	}
-//	if ([_prev isEqualToString:@"a"] && [string isEqualToString:@"e"]) {
-//		NSLog(@"4!");
-//		[sender insertText:@"ä" replacementRange:NSMakeRange(pos-1, 1)];
-//		return YES;
-//	}
-//	if ([_prev isEqualToString:@"e"] && [string isEqualToString:@"'"]) {
-//		NSLog(@"5!");
-//		[sender insertText:@"é" replacementRange:NSMakeRange(pos-1, 1)];
-//		return YES;
-//	}
 	
 	_prev = c;
 	_prev_pos = pos;
