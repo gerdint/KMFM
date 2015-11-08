@@ -1,8 +1,8 @@
 /*
 
-File:NumberInputController.m
+File:KeymanInputController.m
 
-Abstract: Number input controller class.
+Abstract: Keyman input controller class.
 
 Version: 1.0
 
@@ -47,10 +47,10 @@ POSSIBILITY OF SUCH DAMAGE.
 Copyright (C) 2007 Apple Inc. All Rights Reserved.
 
 */
-#import "NumberInputController.h"
+#import "KeymanInputController.h"
 
 
-@implementation NumberInputController
+@implementation KeymanInputController
 
 /*
 Implement one of the three ways to receive input from the client. 
@@ -83,7 +83,7 @@ Here are the three approaches:
 	return NO;
 }
 
-const int NUM_RULES = 7;
+const int NUM_RULES = 8;
 
 unichar rules[NUM_RULES][3] = {
 	{'a','o',0xe5},
@@ -95,7 +95,8 @@ unichar rules[NUM_RULES][3] = {
 	{'a','e',0xe4},
 	{'A','E',0xc4},
 
-	{'e', 0x27, 0xe9}
+	{'e', 0x27, 0xe9},
+	{'e', 0x60, 0xe8}
 };
 
 -(BOOL)inputText:(NSString*)string key:(NSInteger)keyCode modifiers:(NSUInteger)flags client:(id)sender

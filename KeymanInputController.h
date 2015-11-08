@@ -1,6 +1,6 @@
 /*
 
-File:NumberInputController.h
+File:KeymanInputController.h
 
 Abstract: Input controller header file.
 
@@ -50,7 +50,7 @@ Copyright (C) 2007 Apple Inc. All Rights Reserved.
 #import <Cocoa/Cocoa.h>
 #import <InputMethodKit/InputMethodKit.h>
 
-@interface NumberInputController : IMKInputController {
+@interface KeymanInputController : IMKInputController {
     unichar _prev;
     int _prev_pos;
 }

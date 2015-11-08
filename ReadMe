@@ -1,14 +1,14 @@
-NumberInput
+KeymanInput
 
 This project demonstrates do-nothing InputMethodKit input method.  
 
 The project contains 3 source files.  They are:
 
-NumberInputController.h
+KeymanInputController.h
 
 Declares your input controller.  An Objective-C object that sub-classes the new InputMethodKit class IMKInputController.
 
-NumberInputController.m
+KeymanInputController.m
 
 Defines your input controller.  In this instance, a single do-nothing method is defined.  The method is -(BOOL)inputText:(NSString*)string client:(id)sender,
 which is originally defined in the file IMKInputController.h (see /System/Library/Frameworks/InputMethodKit.framework/Headers/).  This method ultimately
@@ -26,9 +26,9 @@ Simply build the project in XCode.  After the project is built drag the resultin
 
 After you have done that open the System Preferences.app, select International, and then select the Input Menu tab.  There you will see a list of Input Methods and Keyboard Layouts.
 
-Find the Input Method called Number Input, and click in the radio button next to in.  That will add the Number Input input method to the Text Input Menu.  
+Find the Input Method called Keyman Input, and click in the radio button next to in.  That will add the Keyman Input input method to the Text Input Menu.  
 
-Now open the application TextEdit.app, go to the Text Input Menu and select NumberInput.  When you type the characters will be passed to the input method which logs the string and returns NO.
+Now open the application TextEdit.app, go to the Text Input Menu and select KeymanInput.  When you type the characters will be passed to the input method which logs the string and returns NO.
 
 Returning NO means that the input was not processed and should be passed on to the client application.  You can see the logged input in the Console application.
 

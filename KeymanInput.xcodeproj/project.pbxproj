@@ -3,18 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4BCB6D141827EC8000BB2B93 /* NumberInput.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D1107320486CEB800E47090 /* NumberInput.app */; };
+		4B6B6B3E19E3125C00F793D0 /* KeymanInput.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D1107320486CEB800E47090 /* KeymanInput.app */; };
+		4B75F2541857373100697B8D /* sv.tif in Resources */ = {isa = PBXBuildFile; fileRef = 4B75F2531857373100697B8D /* sv.tif */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		E93074B70A5C264700470842 /* InputMethodKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93074B60A5C264700470842 /* InputMethodKit.framework */; };
-		E93074E20A5C2F1200470842 /* NumberInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93074E10A5C2F1200470842 /* NumberInputController.m */; };
-		E93396E90A9A0AD60073E6C4 /* nine.tiff in Resources */ = {isa = PBXBuildFile; fileRef = E93396E50A9A0AD50073E6C4 /* nine.tiff */; };
+		E93074E20A5C2F1200470842 /* KeymanInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93074E10A5C2F1200470842 /* KeymanInputController.m */; };
 		E999E1590BE8D77E00CAE01B /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = E999E1580BE8D77E00CAE01B /* ReadMe */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +25,7 @@
 			dstPath = "/Users/tger/Library/Input Methods";
 			dstSubfolderSpec = 0;
 			files = (
-				4BCB6D141827EC8000BB2B93 /* NumberInput.app in CopyFiles */,
+				4B6B6B3E19E3125C00F793D0 /* KeymanInput.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,12 +38,13 @@
 		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		32CA4F630368D1EE00C91783 /* NumberInput_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberInput_Prefix.pch; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* KeymanInput_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeymanInput_Prefix.pch; sourceTree = "<group>"; };
+		4B75F2531857373100697B8D /* sv.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = sv.tif; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* NumberInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107320486CEB800E47090 /* KeymanInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeymanInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93074B60A5C264700470842 /* InputMethodKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputMethodKit.framework; path = /System/Library/Frameworks/InputMethodKit.framework; sourceTree = "<absolute>"; };
-		E93074E00A5C2F1200470842 /* NumberInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberInputController.h; sourceTree = "<group>"; };
-		E93074E10A5C2F1200470842 /* NumberInputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberInputController.m; sourceTree = "<group>"; usesTabs = 1; };
+		E93074E00A5C2F1200470842 /* KeymanInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeymanInputController.h; sourceTree = "<group>"; };
+		E93074E10A5C2F1200470842 /* KeymanInputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeymanInputController.m; sourceTree = "<group>"; usesTabs = 1; };
 		E93396E50A9A0AD50073E6C4 /* nine.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = nine.tiff; sourceTree = "<group>"; };
 		E999E1580BE8D77E00CAE01B /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,8 +65,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E93074E00A5C2F1200470842 /* NumberInputController.h */,
-				E93074E10A5C2F1200470842 /* NumberInputController.m */,
+				E93074E00A5C2F1200470842 /* KeymanInputController.h */,
+				E93074E10A5C2F1200470842 /* KeymanInputController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -91,14 +92,15 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* NumberInput.app */,
+				8D1107320486CEB800E47090 /* KeymanInput.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		29B97314FDCFA39411CA2CEA /* NumberInput */ = {
+		29B97314FDCFA39411CA2CEA /* KeymanInput */ = {
 			isa = PBXGroup;
 			children = (
+				4B75F2531857373100697B8D /* sv.tif */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -106,13 +108,13 @@
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				E999E1580BE8D77E00CAE01B /* ReadMe */,
 			);
-			name = NumberInput;
+			name = KeymanInput;
 			sourceTree = "<group>";
 		};
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32CA4F630368D1EE00C91783 /* NumberInput_Prefix.pch */,
+				32CA4F630368D1EE00C91783 /* KeymanInput_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -149,9 +151,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D1107260486CEB800E47090 /* NumberInput */ = {
+		8D1107260486CEB800E47090 /* KeymanInput */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "NumberInput" */;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "KeymanInput" */;
 			buildPhases = (
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
@@ -162,10 +164,10 @@
 			);
 			dependencies = (
 			);
-			name = NumberInput;
+			name = KeymanInput;
 			productInstallPath = "$(HOME)/Applications";
-			productName = NumberInput;
-			productReference = 8D1107320486CEB800E47090 /* NumberInput.app */;
+			productName = KeymanInput;
+			productReference = 8D1107320486CEB800E47090 /* KeymanInput.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -174,19 +176,20 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0600;
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "NumberInput" */;
-			compatibilityVersion = "Xcode 2.4";
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "KeymanInput" */;
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 29B97314FDCFA39411CA2CEA /* NumberInput */;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* KeymanInput */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D1107260486CEB800E47090 /* NumberInput */,
+				8D1107260486CEB800E47090 /* KeymanInput */,
 			);
 		};
 /* End PBXProject section */
@@ -196,9 +199,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B75F2541857373100697B8D /* sv.tif in Resources */,
 				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
-				E93396E90A9A0AD60073E6C4 /* nine.tiff in Resources */,
 				E999E1590BE8D77E00CAE01B /* ReadMe in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,7 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				E93074E20A5C2F1200470842 /* NumberInputController.m in Sources */,
+				E93074E20A5C2F1200470842 /* KeymanInputController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +243,7 @@
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -247,7 +251,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "\"$(LOCAL_LIBRARY_DIR)/Input Methods/\"";
-				PRODUCT_NAME = NumberInput;
+				PRODUCT_NAME = KeymanInput;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
 			};
@@ -256,15 +260,13 @@
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = NumberInput;
+				INSTALL_PATH = "$(HOME)/Library/Input Methods/\"";
+				"INSTALL_PATH[sdk=*]" = "$(HOME)/Library/Input Methods/\"";
+				PRODUCT_NAME = KeymanInput;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -274,6 +276,8 @@
 			buildSettings = {
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"INSTALL_PATH[sdk=*]" = "/home/tger/Library/Input Methods/";
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 			};
 			name = Debug;
@@ -290,7 +294,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "NumberInput" */ = {
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "KeymanInput" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4B08A954540054247B /* Debug */,
@@ -299,7 +303,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "NumberInput" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "KeymanInput" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
